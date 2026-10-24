@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="StudySpark helps turn long study text into concise notes, key points, and revision questions." />
+  <meta name="theme-color" content="#101828" />
+  <title>StudySpark — Study smarter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="StudySpark home"><span class="brand-mark">✳</span><span>StudySpark</span></a>
+    <span class="top-note"><span class="status-dot"></span> Study workspace</span>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR PERSONAL STUDY WORKSPACE</p>
+        <h1>Make sense of more.<br /><span>Study with clarity.</span></h1>
+        <p class="hero-text">Turn long passages into concise notes, key ideas, and revision questions — all in one place.</p>
+        <div class="hero-tags"><span>✦ Focused learning</span><span>↗ Quick revision</span><span>⌘ Simple workflow</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="spark-card card-back"><span class="mini-icon">✧</span><div class="fake-line long"></div><div class="fake-line"></div><div class="fake-line short"></div></div>
+        <div class="spark-card card-front"><span class="mini-icon purple">✦</span><strong>Study notes</strong><div class="fake-line long"></div><div class="fake-line"></div><div class="fake-line short"></div><div class="card-check">✓</div></div>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="Study assistant tool">
+      <div class="section-heading"><div><p class="eyebrow">STEP 01</p><h2>Bring your material</h2></div><span class="step-pill">Paste · Process · Review</span></div>
+      <label class="field-label" for="sourceText">Study text</label>
+      <textarea id="sourceText" placeholder="Paste a paragraph or your class notes here…\n\nTip: use a passage with several sentences for better results."></textarea>
+      <div class="input-footer"><span id="wordCount">0 words</span><button id="clearBtn" class="text-button" type="button">Clear text</button></div>
+      <div class="action-grid">
+        <button class="action-card primary" data-action="summary" type="button"><span class="action-icon">≡</span><span><strong>Make concise notes</strong><small>Pick out the most informative sentences</small></span><span class="arrow">↗</span></button>
+        <button class="action-card" data-action="keypoints" type="button"><span class="action-icon purple-icon">✦</span><span><strong>Extract key points</strong><small>Find important terms and ideas</small></span><span class="arrow">↗</span></button>
+        <button class="action-card" data-action="questions" type="button"><span class="action-icon blue-icon">?</span><span><strong>Create revision prompts</strong><small>Turn sentences into study questions</small></span><span class="arrow">↗</span></button>
+      </div>
+      <p class="disclaimer"><span>ⓘ</span> This prototype uses local, rule-based text processing. It does not call an AI model or send your text to a server.</p>
+    </section>
+
+    <section id="resultsSection" class="results-section" hidden aria-live="polite">
+      <div class="section-heading"><div><p class="eyebrow">STEP 02</p><h2 id="resultTitle">Your study output</h2></div><button id="copyBtn" class="secondary-button" type="button">Copy result</button></div>
+      <div id="resultContent" class="result-card"></div>
+      <p id="resultHint" class="result-hint"></p>
+    </section>
+
+    <section class="next-step">
+      <div class="next-icon">↗</div><div><p class="eyebrow">WHAT'S NEXT?</p><h2>Start simple. Improve with purpose.</h2><p>This first version is a foundation. The next milestone is connecting a Python backend to a real language model API — with secure server-side key handling.</p></div>
+    </section>
+    <footer><a class="brand footer-brand" href="#top"><span class="brand-mark">✳</span><span>StudySpark</span></a><span>Built as a learning project · Version 1.0</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
