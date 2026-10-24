@@ -41,16 +41,6 @@ studyspark/
     └── (optional screenshots and project images)
 ```
 
-## Deploy with GitHub Pages
-
-1. Create a public repository named `studyspark` on GitHub.
-2. Upload `index.html`, `style.css`, `script.js`, `README.md`, and the `assets` folder.
-3. Open the repository's **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose branch `main` and folder `/ (root)`, then save.
-6. Wait for GitHub Pages to publish the site. The URL will usually look like `https://YOUR-USERNAME.github.io/studyspark/`.
-7. Open the published URL and test all three actions on desktop and mobile.
-
 ## Current limitations
 
 - The summary and key-point extraction are heuristic, not semantic AI.
