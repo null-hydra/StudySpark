@@ -41,23 +41,34 @@ studyspark/
     └── (optional screenshots and project images)
 ```
 
-## Current limitations
+## How It Works
 
-- The summary and key-point extraction are heuristic, not semantic AI.
-- Revision questions are simple prompts, not validated comprehension questions.
-- Results may be inaccurate or unhelpful for short, technical, or non-English passages.
-- This version does not persist notes after refreshing the page.
+StudySpark processes user-provided text in the browser using rule-based text processing. It does not currently call an AI model or require an API key.
 
-## Roadmap
+## Limitations
 
-- [ ] Improve sentence scoring and add test cases
-- [ ] Add saved notes using browser local storage
-- [ ] Add a Python backend (for example, Flask or FastAPI)
-- [ ] Integrate a language model through a server-side API endpoint
-- [ ] Add loading, error, and rate-limit states for AI requests
-- [ ] Never expose API keys in frontend JavaScript or a public repository
-- [ ] Add screenshots and a short demo GIF to this README
+- Results depend on the input text and processing rules.
+- Generated notes may not capture every important detail.
+- Revision questions are generated using basic heuristics.
+- No account system or cloud-based note storage is included.
+
+## Future Improvements
+
+- Improve text summarization and question generation
+- Add the ability to save and manage notes
+- Explore Python backend integration
+- Integrate an AI model through a secure backend
+- Add automated tests
 
 ## Learning goals
 
 This project is intended as a learning exercise in DOM manipulation, basic text processing, responsive design, accessibility, and deployment. Contributions and improvements are welcome.
+
+
+## Live Demo
+
+https://null-hydra.github.io/StudySpark/
+
+## Author
+
+GitHub: https://github.com/null-hydra
